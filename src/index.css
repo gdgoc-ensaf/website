@@ -1,27 +1,235 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
 @import "tailwindcss";
 
 * {
-
   box-sizing: border-box;
-  font-family: 'Inter', sans-serif;
+  margin: 0;
+  padding: 0;
 }
 
+body {
+  min-height: 100vh;
+  background: linear-gradient(180deg, #bfe4fa 0%, #e2f2fd 35%, #ffffff 100%);
+  font-family: 'Google Sans', 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  color: #202124;
+}
 
-html,
-body,
 #root {
-  height: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 
-h1 {
-  font-size: 2rem;
+/* --- Page Container --- */
+.page-container {
+  width: 100%;
+  max-width: 440px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-h2 {
-  font-size: 1.5rem;
+/* --- Profile Header --- */
+.profile-header {
+  text-align: center;
+  margin-bottom: 24px;
 }
 
-h3 {
-  font-size: 1.17rem;
+.gdg-logo {
+  margin-bottom: 14px;
+  display: inline-block;
+  filter: drop-shadow(0 4px 10px rgba(0, 0, 0, 0.06));
+}
+
+.title {
+  font-size: 24px;
+  font-weight: 700;
+  color: #000000;
+  letter-spacing: -0.3px;
+  margin-bottom: 4px;
+}
+
+.subtitle {
+  font-size: 16px;
+  font-weight: 500;
+  color: #1a73e8;
+  margin-bottom: 10px;
+}
+
+.description {
+  font-size: 13.5px;
+  color: #5f6368;
+  line-height: 1.45;
+  max-width: 320px;
+  margin: 0 auto;
+}
+
+/* --- Links Wrapper --- */
+.links-wrapper {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+/* --- The GDG Interactive Card --- */
+.gdg-card {
+  position: relative;
+  display: block;
+  text-decoration: none;
+  border-radius: 18px;
+  background: rgba(255, 255, 255, 0.72);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border: 1.5px solid rgba(255, 255, 255, 0.85);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.04), 0 1px 3px rgba(0, 0, 0, 0.02);
+  overflow: hidden;
+  transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1), 
+              box-shadow 0.3s ease, 
+              border-color 0.3s ease;
+  cursor: pointer;
+}
+
+.gdg-card:hover {
+  transform: translateY(-3px) scale(1.015);
+  border-color: rgba(255, 255, 255, 1);
+  box-shadow: 0 10px 25px rgba(66, 133, 244, 0.12),
+              0 6px 14px rgba(234, 67, 53, 0.08),
+              0 2px 6px rgba(0, 0, 0, 0.04);
+}
+
+.gdg-card:active {
+  transform: translateY(-1px) scale(0.995);
+}
+
+/* --- Button Text & Icon Layer --- */
+.card-content {
+  position: relative;
+  z-index: 3;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  padding: 16px 20px;
+}
+
+.label {
+  font-size: 15.5px;
+  font-weight: 500;
+  color: #1f1f1f;
+  letter-spacing: 0.1px;
+  transition: color 0.25s ease;
+}
+
+.icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  transition: transform 0.3s ease;
+}
+
+.gdg-card:hover .icon {
+  transform: scale(1.12);
+}
+
+/* --- 4-Color Floating Bubbles Background --- */
+.bubbles-wrap {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.bubble {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(28px);
+  opacity: 0;
+  transform: scale(1.2);
+  pointer-events: none;
+  transition: opacity 0.2s ease-out;
+}
+
+/* Google 4 Colors & Positioning */
+.b-blue {
+  width: 90px;
+  height: 90px;
+  background: #4285F4;
+  top: -30px;
+  left: 5%;
+}
+
+.b-red {
+  width: 85px;
+  height: 85px;
+  background: #EA4335;
+  bottom: -30px;
+  left: 32%;
+}
+
+.b-yellow {
+  width: 80px;
+  height: 80px;
+  background: #FBBC05;
+  top: -25px;
+  right: 32%;
+}
+
+.b-green {
+  width: 95px;
+  height: 95px;
+  background: #34A853;
+  bottom: -35px;
+  right: 5%;
+}
+
+/* Trigger Bubbles on Hover + Organic Floating Animation */
+.gdg-card:hover .bubble {
+  opacity: 0.55;
+  transition: opacity 0.35s ease;
+}
+
+.gdg-card:not(:hover) .bubble {
+  opacity: 0;
+  animation: none;
+  transition: opacity 0.2s ease-out;
+}
+
+.gdg-card:hover .b-blue {
+  animation: floatBlue 3.2s infinite ease-in-out;
+}
+
+.gdg-card:hover .b-red {
+  animation: floatRed 3.6s infinite ease-in-out;
+}
+
+.gdg-card:hover .b-yellow {
+  animation: floatYellow 3.4s infinite ease-in-out;
+}
+
+.gdg-card:hover .b-green {
+  animation: floatGreen 3.8s infinite ease-in-out;
+}
+
+/* Subtle Fluid Keyframes for Bubbles */
+@keyframes floatBlue {
+  0%, 100% { transform: scale(1.4) translate(0, 0); }
+  50% { transform: scale(1.7) translate(14px, 8px); }
+}
+
+@keyframes floatRed {
+  0%, 100% { transform: scale(1.3) translate(0, 0); }
+  50% { transform: scale(1.6) translate(-12px, -8px); }
+}
+
+@keyframes floatYellow {
+  0%, 100% { transform: scale(1.35) translate(0, 0); }
+  50% { transform: scale(1.65) translate(10px, -10px); }
+}
+
+@keyframes floatGreen {
+  0%, 100% { transform: scale(1.4) translate(0, 0); }
+  50% { transform: scale(1.75) translate(-14px, 6px); }
 }
