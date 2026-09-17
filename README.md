@@ -103,8 +103,9 @@ npm run dev
 
 Join our chapter, contribute to our repositories, or attend our upcoming sessions:
 
+* 📝 **Join our Chapter:** [Membership Application Form](https://docs.google.com/forms/d/e/1FAIpQLSe4kiDNwNAHpIgzZOwpmghO_UioC8Kb8soDfCF1ChHJQKlvyQ/viewform)
 * 🌐 **Discord:** [discord.gg/AhzcJ337Q](https://discord.gg/AhzcJ337Q)
-* 💼 **LinkedIn:** [GDG on Campus ENSA Fez](https://www.linkedin.com/in/marwane-gdg-on-campus-ensa-fez-77056b437/)
+* 💼 **LinkedIn:** GDG on Campus ENSA Fez *(Coming Soon)*
 * 💬 **WhatsApp:** [Join Community Chat](https://chat.whatsapp.com/InjXKWptVBr0FKgtomo5Nb)
 * 📸 **Instagram:** [@gdg.ensaf](https://www.instagram.com/gdg.ensaf/)
 * 🐙 **GitHub:** [gdgoc-ensaf](https://github.com/gdgoc-ensaf)

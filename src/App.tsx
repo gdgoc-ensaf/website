@@ -11,7 +11,7 @@ function App() {
   const links: SocialLink[] = [
     {
       label: 'Join our Chapter',
-      to: '',
+      to: 'https://docs.google.com/forms/d/e/1FAIpQLSe4kiDNwNAHpIgzZOwpmghO_UioC8Kb8soDfCF1ChHJQKlvyQ/viewform?utm_source=ig&utm_medium=social&utm_content=link_in_bio&fbclid=PAcGRvZgJleHRuA2FlbQIxMQBzcnRjBmFwcF9pZA81NjcwNjczNDMzNTI0MjcAAad3aq8MAeiU_gE0apGBjrlkpMm5iJE7hi-r2ne5tcG0iI8Y8d8NWxQLWv8MtA_aem_xQsoPhgsLALPDJC0uL0f3A',
       icon: (
         <svg className="icon" viewBox="0 0 24 24" width="22" height="22">
           <path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/>
@@ -23,7 +23,7 @@ function App() {
     },
     {
       label: 'LinkedIn',
-      to: 'https://www.linkedin.com/in/marwane-gdg-on-campus-ensa-fez-77056b437/',
+      to: '',
       icon: (
         <svg className="icon" viewBox="0 0 24 24" width="22" height="22" fill="#0A66C2">
           <path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z"/>
